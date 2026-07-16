@@ -1,0 +1,547 @@
+/*==================================================
+    ESTILOS GLOBALES DEL SISTEMA
+==================================================*/
+
+/*=====================================
+    GOOGLE FONT
+=====================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+/*=====================================
+    VARIABLES
+=====================================*/
+
+:root{
+
+    --primary:#1E3A8A;
+    --primary-light:#2563EB;
+
+    --background:#F1F5F9;
+
+    --white:#FFFFFF;
+
+    --text:#334155;
+
+    --gray:#94A3B8;
+
+    --border:#E2E8F0;
+
+    --shadow:0 8px 20px rgba(0,0,0,.08);
+
+    --radius:15px;
+
+}
+
+/*=====================================
+    BODY
+=====================================*/
+
+body{
+
+    background:var(--background);
+
+    display:flex;
+
+    color:var(--text);
+
+}
+
+/*=====================================
+    SIDEBAR
+=====================================*/
+
+.sidebar{
+
+    width:260px;
+
+    height:100vh;
+
+    background:linear-gradient(180deg,#1E3A8A,#2563EB);
+
+    position:fixed;
+
+    left:0;
+
+    top:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    color:white;
+
+    box-shadow:4px 0 15px rgba(0,0,0,.1);
+
+}
+
+/*=====================================
+    LOGO
+=====================================*/
+
+.logo{
+
+    padding:35px 20px;
+
+    text-align:center;
+
+    border-bottom:1px solid rgba(255,255,255,.15);
+
+}
+
+.logo i{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+.logo h2{
+
+    font-size:26px;
+
+    font-weight:600;
+
+}
+
+/*=====================================
+    MENU
+=====================================*/
+
+nav{
+
+    margin-top:20px;
+
+}
+
+nav ul{
+
+    list-style:none;
+
+}
+
+nav li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:18px 25px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    margin:5px 12px;
+
+    border-radius:12px;
+
+}
+
+nav li:hover{
+
+    background:rgba(255,255,255,.15);
+
+}
+
+.active{
+
+    background:white;
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+nav li i{
+
+    font-size:20px;
+
+}
+
+/*=====================================
+    CONTENIDO
+=====================================*/
+
+.main{
+
+    margin-left:260px;
+
+    width:calc(100% - 260px);
+
+    min-height:100vh;
+
+    padding:30px;
+
+}
+
+/*=====================================
+    HEADER
+=====================================*/
+
+.header{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:20px 30px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:30px;
+
+}
+
+.header h1{
+
+    font-size:28px;
+
+    color:var(--primary);
+
+}
+
+.header p{
+
+    color:var(--gray);
+
+    margin-top:5px;
+
+}
+
+.header-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.notification{
+
+    width:45px;
+
+    height:45px;
+
+    border:none;
+
+    background:#EEF4FF;
+
+    border-radius:50%;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    color:var(--primary);
+
+    transition:.3s;
+
+}
+
+.notification:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    font-weight:500;
+
+}
+
+.user i{
+
+    font-size:30px;
+
+    color:var(--primary);
+
+}
+
+/*=====================================
+    DASHBOARD
+=====================================*/
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+    margin-bottom:35px;
+
+}
+
+/*=====================================
+    TARJETAS
+=====================================*/
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:28px;
+
+}
+
+.blue{
+
+    background:#2563EB;
+
+}
+
+.green{
+
+    background:#10B981;
+
+}
+
+.orange{
+
+    background:#F59E0B;
+
+}
+
+.red{
+
+    background:#EF4444;
+
+}
+
+.card h3{
+
+    font-size:28px;
+
+    margin-bottom:5px;
+
+}
+
+.card p{
+
+    color:var(--gray);
+
+}
+
+/*=====================================
+    ACTIVIDAD
+=====================================*/
+
+.activity{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:25px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.section-title{
+
+    margin-bottom:20px;
+
+}
+
+.section-title h2{
+
+    color:var(--primary);
+
+}
+
+/*=====================================
+    RESPONSIVE
+=====================================*/
+
+@media(max-width:1200px){
+
+.dashboard{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:900px){
+
+.sidebar{
+
+width:90px;
+
+}
+
+.logo h2{
+
+display:none;
+
+}
+
+nav li span{
+
+display:none;
+
+}
+
+.main{
+
+margin-left:90px;
+
+width:calc(100% - 90px);
+
+}
+
+}
+
+@media(max-width:700px){
+
+body{
+
+flex-direction:column;
+
+}
+
+.sidebar{
+
+position:relative;
+
+width:100%;
+
+height:auto;
+
+}
+
+.main{
+
+margin-left:0;
+
+width:100%;
+
+padding:15px;
+
+}
+
+.header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:15px;
+
+}
+
+.dashboard{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/*===============================
+BOTONES
+================================*/
+
+.btn{
+
+    border:none;
+
+    cursor:pointer;
+
+    padding:12px 20px;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-light);
+
+}

@@ -1,0 +1,225 @@
+<div class="page">
+
+    <!-- ENCABEZADO -->
+
+    <section class="page-header">
+
+        <div>
+
+            <h2>Gestión de Pagos</h2>
+
+            <p>Registro y administración de recibos de pago.</p>
+
+        </div>
+
+        <button
+            type="button"
+            class="btn btn-primary"
+            id="btnNuevoPago">
+
+            <i class="bi bi-cash-stack"></i>
+
+            Nuevo Pago
+
+        </button>
+
+    </section>
+
+    <!-- BUSCADOR -->
+
+    <section class="toolbar">
+
+        <div class="search-box">
+
+            <i class="bi bi-search"></i>
+
+            <input
+                type="text"
+                id="buscarPago"
+                placeholder="Buscar por ID, personal o comprobante"
+                autocomplete="off">
+
+        </div>
+
+    </section>
+
+    <!-- TABLA -->
+
+    <section class="table-container">
+
+        <table
+            id="tablaPagos"
+            class="tabla-alumnos">
+
+            <thead>
+
+                <tr>
+
+                    <th>ID Recibo</th>
+
+                    <th>Fecha de pago</th>
+
+                    <th>ID Personal</th>
+
+                    <th>Tipo de comprobante</th>
+
+                    <th>Acciones</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</div>
+
+<!--=====================================
+    MODAL DE PAGOS
+======================================-->
+
+<div
+    class="modal"
+    id="modalPago">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+
+            <h2 id="tituloModalPago">
+
+                Registrar Pago
+
+            </h2>
+
+            <button
+                type="button"
+                class="btn-close"
+                id="cerrarModalPago">
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+        <form id="formPago">
+
+            <!-- ID DEL RECIBO -->
+
+            <div class="form-group">
+
+                <label for="idRecibo">
+
+                    ID Recibo
+
+                </label>
+
+                <input
+                    type="number"
+                    id="idRecibo"
+                    min="1"
+                    required>
+
+            </div>
+
+            <!-- FECHA DE PAGO -->
+
+            <div class="form-group">
+
+                <label for="fechaPago">
+
+                    Fecha de pago
+
+                </label>
+
+                <input
+                    type="date"
+                    id="fechaPago"
+                    required>
+
+            </div>
+
+            <!-- ID DEL PERSONAL -->
+
+            <div class="form-group">
+
+                <label for="idPersonalPago">
+
+                    ID Personal
+
+                </label>
+
+                <input
+                    type="number"
+                    id="idPersonalPago"
+                    min="1"
+                    required>
+
+            </div>
+
+            <!-- TIPO DE COMPROBANTE -->
+
+            <div class="form-group">
+
+                <label for="idTipoComprobante">
+
+                    ID Tipo de comprobante
+
+                </label>
+
+                <input
+                    type="number"
+                    id="idTipoComprobante"
+                    min="1"
+                    required>
+
+            </div>
+
+            <!-- BOTONES -->
+
+            <div class="modal-footer">
+
+                <button
+                    type="button"
+                    class="btn btn-secondary"
+                    id="btnCancelarPago">
+
+                    Cancelar
+
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Guardar Pago
+
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<!--=====================================
+    NOTIFICACIÓN TOAST
+======================================-->
+
+<div
+    id="toast"
+    class="toast">
+
+    <i class="bi bi-check-circle-fill"></i>
+
+    <span id="toastMensaje"></span>
+
+</div>
